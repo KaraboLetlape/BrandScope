@@ -1,0 +1,23 @@
+BrandScope Part 2 — Submission Notes
+
+Completed:
+- External css/style.css
+- CSS reset and base styles
+- Typography and visual styling
+- CSS Grid and Flexbox layouts
+- Desktop/tablet/mobile media queries
+- Relative units and clamp()
+- Hover, focus and active states
+- Responsive images using picture/srcset/sizes
+- Part 1 technical corrections
+- README with Part 2 changelog, testing instructions and references
+
+Before final LMS submission:
+1. Open brandscope.html in Chrome.
+2. Use DevTools Device Toolbar to test desktop, tablet and mobile.
+3. Capture the three required screenshots.
+4. Save them in screenshots/ using the filenames in README.md.
+5. Push the project to the existing GitHub repository.
+6. Submit the GitHub repository URL to the LMS.
+
+The original Part 1 archive did not contain the lecturer's written feedback, so no feedback statements have been invented.

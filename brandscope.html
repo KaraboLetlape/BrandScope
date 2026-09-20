@@ -18,7 +18,7 @@
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#shop">Shop</a>
-            <a href="#brands">Brands</a>
+            <a href="#products">Brands</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -52,244 +52,100 @@
 
 </section>
             <!-- SHOP CATEGORIES -->
-<section /* =========================
-   SHOP CATEGORY SECTION
-   ========================= */
-
-.categories {
-    background-color: #ffffff;
-    padding: 90px 50px;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-heading p {
-    font-size: 13px;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.section-heading h2 {
-    font-size: 40px;
-    letter-spacing: 2px;
-}
-
-/* CATEGORY GRID */
-
-.category-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-/* CATEGORY CARD */
-
-.category-card {
-    height: 300px;
-
-    position: relative;
-
-    display: flex;
-    align-items: flex-end;
-
-    overflow: hidden;
-
-    background-color: #eeeeee;
-
-    text-decoration: none;
-
-    transition: transform 0.3s ease;
-}
-
-.category-card:hover {
-    transform: translateY(-8px);
-}
-
-/* CATEGORY IMAGE */
-
-.category-image {
-    position: absolute;
-
-    inset: 0;
-
-    background-size: cover;
-    background-position: center;
-
-    transition: transform 0.4s ease;
-}
-
-.category-card:hover .category-image {
-    transform: scale(1.08);
-}
-
-/* DARK OVERLAY */
-
-.category-card::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background: linear-gradient(
-        transparent 35%,
-        rgba(0, 0, 0, 0.85)
-    );
-}
-
-/* CATEGORY NAME */
-
-.category-card h3 {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    padding: 20px;
-
-    color: white;
-
-    font-size: 21px;
-
-    letter-spacing: 2px;
-
-    text-align: left;
-}
-
-/* =========================
-   TEMPORARY CATEGORY BACKGROUNDS
-   ========================= */
-
-.tshirts {
-    background: linear-gradient(135deg, #333333, #999999);
-}
-
-.hoodies {
-    background: linear-gradient(135deg, #111111, #555555);
-}
-
-.sweaters {
-    background: linear-gradient(135deg, #444444, #aaaaaa);
-}
-
-.jackets {
-    background: linear-gradient(135deg, #222222, #777777);
-}
-
-.pants {
-    background: linear-gradient(135deg, #333333, #777777);
-}
-
-.caps {
-    background: linear-gradient(135deg, #111111, #888888);
-}
-
-.beanies {
-    background: linear-gradient(135deg, #555555, #bbbbbb);
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 900px) {
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .categories {
-        padding: 60px 20px;
-    }
-
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading h2 {
-        font-size: 30px;
-    }
-
-}
-</section>
 <section id="shop" class="categories">
-
     <div class="section-heading">
         <p>BRANDSCOPE COLLECTION</p>
         <h2>SHOP BY CATEGORY</h2>
     </div>
 
     <div class="category-grid">
-
         <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/T-Shirts/White,Blue Arcteryx tshirt.PNG" alt="T-Shirts">
-    </div>
-    <h3>T-SHIRTS</h3>
-</a>
-
-        <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Hoodies/Grey Camo Aape Hoodie.PNG" alt="Hoodies">
-    </div>
-    <h3>HOODIES</h3>
-</a>
-
-       <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Sweaters/GREEN S SWIRL STUSSY SWEATER.JPEG" alt="Sweaters">
-    </div>
-    <h3>SWEATERS</h3>
-
-       <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Jackets/TNF X Supreme jacket.JPEG" alt="Jackets">
-    </div>
-    <h3>JACKETS</h3>
-</a>
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/T-Shirts/White-Blue-Arcteryx-tshirt-mobile.png">
+                    <img src="images/T-Shirts/White-Blue-Arcteryx-tshirt.PNG"
+                         srcset="images/T-Shirts/White-Blue-Arcteryx-tshirt-mobile.png 720w, images/T-Shirts/White-Blue-Arcteryx-tshirt.PNG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="T-Shirts">
+                </picture>
+            </div>
+            <h3>T-SHIRTS</h3>
         </a>
-  <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Pants/columbia omni pants.PNG" alt="Pants">
-    </div>
-    <h3>PANTS</h3>
-</a>
-     <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Caps/nike cap.PNG" alt="Caps">
-    </div>
-    <h3>Caps
 
-    </h3>
-</a>
-     
-       <a href="#products" class="category-card">
-    <div class="category-image">
-        <img src="images/Beanies/C.P Company black beanie.JPEG" alt="Beanies">
-    </div>
-    <h3>BEANIES</h3>
-</a>
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Hoodies/Grey Camo Aape Hoodie-mobile.png">
+                    <img src="images/Hoodies/Grey Camo Aape Hoodie.PNG"
+                         srcset="images/Hoodies/Grey Camo Aape Hoodie-mobile.png 720w, images/Hoodies/Grey Camo Aape Hoodie.PNG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Hoodies">
+                </picture>
+            </div>
+            <h3>HOODIES</h3>
+        </a>
 
-    </div>
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Sweaters/GREEN S SWIRL STUSSY SWEATER-mobile.JPEG">
+                    <img src="images/Sweaters/GREEN S SWIRL STUSSY SWEATER.JPEG"
+                         srcset="images/Sweaters/GREEN S SWIRL STUSSY SWEATER-mobile.JPEG 720w, images/Sweaters/GREEN S SWIRL STUSSY SWEATER.JPEG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Sweaters">
+                </picture>
+            </div>
+            <h3>SWEATERS</h3>
+        </a>
 
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Jackets/TNF X Supreme jacket-mobile.JPEG">
+                    <img src="images/Jackets/TNF X Supreme jacket.JPEG"
+                         srcset="images/Jackets/TNF X Supreme jacket-mobile.JPEG 720w, images/Jackets/TNF X Supreme jacket.JPEG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Jackets">
+                </picture>
+            </div>
+            <h3>JACKETS</h3>
+        </a>
+
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Pants/columbia omni pants-mobile.PNG">
+                    <img src="images/Pants/columbia omni pants.PNG"
+                         srcset="images/Pants/columbia omni pants-mobile.PNG 720w, images/Pants/columbia omni pants.PNG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Pants">
+                </picture>
+            </div>
+            <h3>PANTS</h3>
+        </a>
+
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Caps/nike cap-mobile.PNG">
+                    <img src="images/Caps/nike cap.PNG"
+                         srcset="images/Caps/nike cap-mobile.PNG 720w, images/Caps/nike cap.PNG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Caps">
+                </picture>
+            </div>
+            <h3>CAPS</h3>
+        </a>
+
+        <a href="#products" class="category-card">
+            <div class="category-image">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="images/Beanies/C.P Company black beanie-mobile.JPEG">
+                    <img src="images/Beanies/C.P Company black beanie.JPEG"
+                         srcset="images/Beanies/C.P Company black beanie-mobile.JPEG 720w, images/Beanies/C.P Company black beanie.JPEG 1200w"
+                         sizes="(max-width: 640px) 100vw, 25vw" alt="Beanies">
+                </picture>
+            </div>
+            <h3>BEANIES</h3>
+        </a>
+    </div>
 </section>
 
-    </div>
-
-</section><!-- PRODUCTS SECTION -->
+<!-- PRODUCTS SECTION -->
 <section id="products" class="products-section">
 
     <div class="section-heading">
@@ -516,7 +372,7 @@
 
             <h3>SEND US A MESSAGE</h3>
 
-            <form>
+            <form id="contactForm">
 
                 <label for="name">Name</label>
 
@@ -632,13 +488,5 @@
 
     <script src="javascript/script.js"></script>
 
-</bodybody {
-    background-color: #111111;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-<body>
-
-  
+</body>
+</html>
