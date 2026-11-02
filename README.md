@@ -1,211 +1,137 @@
-# BrandScope — Part 2: CSS Styling and Responsive Design
+# BrandScope — Part 3: Interactive Features, SEO and Deployment
 
-## Student Information
+## Student and project details
+- **Student:** Karabo Letlape
+- **Student number:** ST10514955
+- **Module:** WEDPOE — Web Development (Introduction)
+- **Project:** BrandScope
+- **Assessment:** Part 3
 
-- **Student Name:** Karabo Letlape
-- **Student Number:** ST10514955
-- **Course:** Diploma in Software Development
-- **Module:** WEDPOE
-- **Project:** BrandScope Website
-- **Part:** Part 2 — Designing the Visuals: CSS Styling and Responsive Design
+## 1. Project overview
+BrandScope is a South African streetwear resale showcase based in Johannesburg. It presents curated branded clothing and accessories, product details, contact information and ways for visitors to enquire about products. Part 3 extends the responsive Part 2 website with functional interaction, search, an image lightbox, an interactive map, enquiry handling, accessibility improvements and SEO metadata.
 
----
+## 2. Part 2 feedback and improvements
+The Part 2 archive did not contain the lecturer's written feedback. This document therefore does not invent feedback. The following implementation improvements were made while extending the project:
+- Preserved the existing BrandScope visual identity, homepage, five product pages, stylesheet and original product photography.
+- Converted image filenames to lowercase, descriptive, hyphen-separated names and updated their references.
+- Added descriptive alternative text to content images and lazy loading to product images.
+- Replaced decorative product image backgrounds in the featured collection with semantic image elements.
+- Added accessible labels, live status feedback and keyboard-operable controls.
+- Kept the responsive CSS layout and added styles for the new Part 3 features.
 
-## 1. Project Overview
+## 3. Interactive elements
+- Header search icon scrolls to and focuses the product search field.
+- Product cards include an **Add to Enquiry** control.
+- The enquiry bag opens and closes, displays selected products, supports removing an item, updates its item count and creates a WhatsApp enquiry message.
+- Navigation links and product links connect the homepage and product detail pages.
+- Product/category images open in the image viewer.
 
-BrandScope is a South African streetwear resale website created to showcase curated branded clothing and accessories. The original Part 1 project included a homepage, category sections, featured products and individual product pages.
+## 4. Interactive map
+The Contact section includes a responsive, embedded Google Maps view for Johannesburg, South Africa. The map is loaded in an iframe with a descriptive title and lazy loading. An internet connection is required for the embedded map to load.
 
-Part 2 builds on that foundation by introducing a dedicated external stylesheet, improved visual consistency, CSS Grid/Flexbox layouts, interactive states and responsive behaviour for desktop, tablet and mobile screen sizes.
+## 5. Gallery lightbox
+The image viewer supports:
+- Opening images from the category grid, featured products and individual product pages.
+- Previous and next image navigation on the homepage.
+- Closing with the close button, by clicking the backdrop, or with the Escape key.
+- Left and right arrow-key navigation.
+- Descriptive alternative text and captions.
+- Focus return to the image that opened the viewer.
 
----
+## 6. Dynamic content and search
+The product search filters the five featured product cards while the visitor types. Matching is case-insensitive and searches the visible product and brand text. A live status message reports the number of matching products. The Clear button restores all products.
 
-## 2. Part 1 Feedback / Corrections
+## 7. Search engine optimisation (SEO)
+Every HTML page includes:
+- A unique, descriptive title.
+- A page-specific meta description.
+- Relevant meta keywords.
+- Author and robots metadata.
+- Open Graph title, description and type metadata.
 
-The Part 1 implementation was reviewed while preparing Part 2. The following technical improvements were made:
+Image improvements:
+- Descriptive, lowercase, hyphenated filenames.
+- Meaningful `alt` text for content images.
+- `loading="lazy"` on product/detail images where appropriate.
 
-1. Consolidated the website styling into the external `css/style.css` file.
-2. Removed duplicated/invalid CSS content that had been embedded inside the homepage markup.
-3. Removed local Windows `file:///` links and replaced them with relative website links so the project works when uploaded to GitHub.
-4. Corrected the JavaScript reference to the existing `javascript/script.js` file.
-5. Corrected navigation so the same relative links work from the homepage and product pages.
-6. Improved semantic organisation of the category and product sections.
-7. Added responsive image markup using `<picture>`, `srcset` and `sizes`.
-8. Added keyboard focus states and clearer interactive states for links, buttons and form controls.
+Note: meta keywords are included because they appear in the assessment rubric, although major search engines generally do not use the keywords meta tag as a ranking signal. Update the canonical URL and social preview image metadata after the final GitHub Pages address is known.
 
-> **Note:** The original lecturer's written Part 1 feedback was not included in the uploaded project archive. Therefore, the changelog records the concrete technical corrections made during the Part 2 revision rather than inventing lecturer comments.
+## 8. Enquiry form functionality and validation
+The contact form requests:
+- Full name.
+- Email address.
+- Optional phone number.
+- Enquiry type.
+- Message.
 
----
+JavaScript validates the required fields, email format, optional phone format and message length. Invalid fields receive an inline error message, an `aria-invalid` state and focus when submission fails. A valid submission builds a pre-filled email addressed to `brandscope.za@gmail.com` using the visitor's default email application.
 
-## 3. CSS Styling for Desktop Solution
+**Important technical limitation:** this static HTML/CSS/JavaScript project has no server-side email service or database. The form does not silently claim that an email was sent; it opens the visitor's email application and the visitor must press Send. A backend or form service would be needed for automatic server-side submission.
 
-### 3.1 External Stylesheet
+## 9. Contact controls and process
+The website provides:
+- Email link using `mailto:brandscope.za@gmail.com`.
+- WhatsApp links for the existing BrandScope contact numbers.
+- Instagram link to `@brandscope.za`.
+- Johannesburg location and embedded map.
+- Product-specific WhatsApp purchase/enquiry links.
+- Enquiry bag WhatsApp message containing selected product names and displayed prices.
 
-All website pages now link to:
+External links open in a new tab where appropriate. The visitor can choose the contact channel that suits their enquiry.
 
+## 10. Testing checklist
+Run the project from the `brandscope.html` homepage using a local development server (recommended) or open it in a browser. Test the following:
+
+### Desktop, tablet and mobile
+- [ ] Desktop layout at approximately 1440 × 900.
+- [ ] Tablet layout at approximately 768 × 1024.
+- [ ] Mobile layout at approximately 390 × 844.
+- [ ] Navigation, category cards and product cards remain usable.
+- [ ] No horizontal overflow or clipped text.
+- [ ] Map resizes within the contact section.
+
+### Interactive functionality
+- [ ] Header search icon focuses the search field.
+- [ ] Search for `Nike`, `Stussy`, `hoodie` and a term with no results.
+- [ ] Clear search restores all products.
+- [ ] Add multiple products to the enquiry bag.
+- [ ] Remove an item and check the count updates.
+- [ ] Enquiry bag WhatsApp link includes selected products.
+- [ ] Open a category/product image in the lightbox.
+- [ ] Test previous/next, Escape, backdrop and close controls.
+- [ ] Test the product image viewer on each product detail page.
+
+### Forms and contact
+- [ ] Submit the form empty and confirm inline errors appear.
+- [ ] Test an invalid email address.
+- [ ] Test a phone number and the optional blank phone field.
+- [ ] Test a message shorter than 10 characters.
+- [ ] Submit valid information and confirm a pre-filled email is created.
+- [ ] Check email, WhatsApp and Instagram contact links.
+
+### SEO and technical checks
+- [ ] Each page has a unique title and meta description.
+- [ ] All content images have useful alt text.
+- [ ] Confirm renamed image files load without 404 errors.
+- [ ] Check browser console for JavaScript errors.
+- [ ] Check all internal product and navigation links.
+- [ ] Confirm the map loads with an internet connection.
+
+Capture real screenshots of the completed desktop, tablet and mobile tests and add them to a `screenshots/` folder before submission. Do not include screenshots of features that have not been tested.
+
+## 11. Project structure
 ```text
-css/style.css
-```
-
-The stylesheet contains the shared visual system for the homepage and individual product pages.
-
-### 3.2 Base Styles and CSS Reset
-
-The stylesheet includes:
-
-- Universal `box-sizing` reset.
-- Removal of inconsistent default heading and paragraph margins.
-- Responsive image defaults.
-- Shared CSS custom properties for colours, spacing, width and shadows.
-- A consistent Arial/Helvetica font stack.
-- Base font size and line-height.
-- Keyboard focus styling.
-
-### 3.3 Typography
-
-Typography uses:
-
-- `font-family`
-- `font-size`
-- `font-weight`
-- `line-height`
-- `letter-spacing`
-- `clamp()` for responsive heading sizes
-
-This creates a consistent hierarchy between hero text, section headings, product information and supporting text.
-
-### 3.4 Layout
-
-The website uses CSS Grid and Flexbox.
-
-Examples include:
-
-- Four-column desktop category grid.
-- Four-column desktop product grid.
-- Two-column desktop About section.
-- Two-column desktop Contact section.
-- Two-column desktop product detail layout.
-- Flexbox navigation and footer groups.
-
----
-
-## 4. Visual Styling
-
-The BrandScope visual system uses a black, white and grey streetwear-inspired colour palette.
-
-Visual CSS includes:
-
-- `background-color`
-- `color`
-- `border`
-- `border-radius`
-- `box-shadow`
-- gradients
-- image overlays
-- transitions
-- transforms
-
-Interactive states include:
-
-- `:hover`
-- `:focus-visible`
-- `:focus`
-- `:active`
-
-For example, product and category cards move slightly upward on hover, while navigation links receive an animated underline.
-
----
-
-## 5. Responsive Design
-
-### 5.1 Breakpoints
-
-The stylesheet uses three practical layout ranges:
-
-| Screen type | Breakpoint | Main changes |
-|---|---:|---|
-| Desktop | Above 1000px | Multi-column grids and two-column content layouts |
-| Tablet | 641px–1000px | Two-column grids and stacked content sections |
-| Mobile | 640px and below | Single-column grids, wrapped navigation and smaller spacing/type |
-
-### 5.2 Relative Units
-
-Relative and responsive units are used throughout the stylesheet, including:
-
-- `%`
-- `rem`
-- `em`
-- `vw`
-- `vh`
-- `svh`
-- `clamp()`
-
-These values allow spacing and typography to adapt to the available viewport.
-
-### 5.3 Responsive Images
-
-The category images use:
-
-- `<picture>`
-- `<source media>`
-- `srcset`
-- `sizes`
-
-Mobile-sized image variants were created for the category assets so smaller screens can request a more appropriate image resource.
-
----
-
-## 6. Browser Developer Tools Testing
-
-The website should be tested using Chrome Developer Tools.
-
-Recommended viewport evidence:
-
-1. **Desktop:** 1440 × 900
-2. **Tablet:** approximately 768 × 1024
-3. **Mobile:** approximately 390 × 844
-
-For each viewport, verify:
-
-- Navigation remains usable.
-- Text does not overflow.
-- Category cards change from four columns to two and then one.
-- Product cards change from four columns to two and then one.
-- About and Contact sections stack on smaller screens.
-- Product detail pages stack correctly.
-- Images remain contained within their cards.
-- Form controls remain usable.
-- Hover/focus interactions remain accessible.
-
-### Screenshot Evidence
-
-Save screenshots in:
-
-```text
-screenshots/
-├── desktop-1440.png
-├── tablet-768.png
-└── mobile-390.png
-```
-
-These screenshots should be inserted into this README after testing in Chrome Developer Tools.
-
----
-
-## 7. Updated Project Structure
-
-```text
-BRANDSCOPE/
-│
+BrandScope_Part2_Merged/
 ├── brandscope.html
 ├── product-Aape.html
 ├── product-C.P company.html
 ├── product-Nike.html
 ├── product-stussy.html
 ├── product-tnf supreme.html
-│
 ├── css/
 │   └── style.css
-│
+├── javascript/
+│   └── script.js
 ├── images/
 │   ├── Beanies/
 │   ├── Caps/
@@ -214,94 +140,70 @@ BRANDSCOPE/
 │   ├── Pants/
 │   ├── Sweaters/
 │   └── T-Shirts/
-│
-├── javascript/
-│   └── script.js
-│
-├── screenshots/
-│   └── [desktop/tablet/mobile evidence]
-│
-└── README.md
+├── README.md
+├── CHANGELOG.md
+└── .nojekyll
 ```
 
----
+## 12. GitHub commits
+Use meaningful commits as each feature is completed. Suggested commands:
 
-## 8. Changelog
+Create multiple descriptive commits, stage the related files, and push the history:
 
-### Version 2.0 — Part 2
+```bash
+git status
+git add brandscope.html javascript/script.js css/style.css
+git commit -m "feat: add interactive search enquiry bag map and form"
 
-- Created and implemented a single external stylesheet at `css/style.css`.
-- Added a CSS reset and shared CSS custom properties.
-- Standardised typography, spacing and colour usage.
-- Rebuilt desktop layouts using CSS Grid and Flexbox.
-- Added responsive desktop, tablet and mobile breakpoints.
-- Added relative units including `rem`, `%`, `vw`, `vh` and `clamp()`.
-- Added hover, focus and active interaction states.
-- Improved category-card image behaviour and overlays.
-- Added responsive `<picture>`, `srcset` and `sizes` markup to category images.
-- Generated smaller mobile image variants for category assets.
-- Corrected local `file:///` navigation links so the website works when hosted in a repository.
-- Corrected the JavaScript file reference.
-- Corrected navigation between the homepage and product pages.
-- Improved product detail layouts for smaller screens.
-- Improved contact form styling and focus behaviour.
-- Added reduced-motion support for users who prefer less animation.
-- Updated README documentation for Part 2.
-- Added testing instructions and required screenshot evidence locations.
+git add product-*.html
+git commit -m "feat: add product page SEO and image lightbox support"
 
----
+git add images README.md CHANGELOG.md .nojekyll
+git commit -m "docs: optimise image assets and complete Part 3 documentation"
 
-## 9. Suggested Git Commit Messages
-
-Use descriptive commits such as:
-
-```text
-feat: add external CSS stylesheet for BrandScope
-style: improve desktop layout and typography
-feat: add responsive tablet and mobile breakpoints
-feat: add responsive images with srcset and picture
-fix: replace local file URLs with relative links
-fix: correct JavaScript reference
-docs: update README for Part 2
-test: document desktop tablet and mobile testing
+git log --oneline
+git push origin main
 ```
 
----
+If a command reports that there is nothing to commit, check `git status` and continue. The commits must be pushed to the existing GitHub repository for the online marking evidence.
 
-## 10. References
+## 13. Deployment — GitHub Pages
+The website is a static website and can be hosted with GitHub Pages.
 
-The following technical references were used to guide the CSS and responsive implementation:
+1. Push the complete project to the existing GitHub repository.
+2. Open the repository on GitHub.
+3. Select **Settings → Pages**.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Choose the `main` branch and `/ (root)` folder, then save.
+6. Wait for GitHub Pages to publish the site.
+7. Open the published URL and test the homepage, all product pages, images, search, enquiry bag, lightbox, map and form.
+8. Add the final published URL to this README and set the canonical URL in the homepage to that real URL.
 
-1. MDN Web Docs — CSS.
-2. MDN Web Docs — CSS Grid Layout.
-3. MDN Web Docs — Flexbox.
-4. MDN Web Docs — CSS Media Queries.
-5. MDN Web Docs — Responsive images.
-6. MDN Web Docs — `<picture>`, `srcset` and `sizes`.
+The project files are prepared for static hosting, but deployment is not complete until the repository owner enables Pages and verifies the published URL.
 
-External product and image sources used for the original BrandScope content remain part of the project's existing research/materials and should be retained according to the referencing requirements for the module.
+## 14. References
+- MDN Web Docs. (n.d.). *HTML: HyperText Markup Language*. https://developer.mozilla.org/en-US/docs/Web/HTML
+- MDN Web Docs. (n.d.). *The meta element*. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+- MDN Web Docs. (n.d.). *HTML forms*. https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms
+- MDN Web Docs. (n.d.). *Constraint validation*. https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+- MDN Web Docs. (n.d.). *JavaScript*. https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- MDN Web Docs. (n.d.). *EventTarget.addEventListener()*. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+- MDN Web Docs. (n.d.). *Responsive images*. https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images
+- Google Maps Platform. (n.d.). *Maps Embed API*. https://developers.google.com/maps/documentation/embed
+- GitHub Docs. (n.d.). *What is GitHub Pages?*. https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
----
+Product names and trademarks remain the property of their respective owners. BrandScope is an independent resale/showcase project and does not claim affiliation with the brands displayed.
 
-## 11. Submission Checklist
-
-Before submitting Part 2:
-
-- [ ] Confirm all HTML pages open correctly.
-- [ ] Confirm all pages use `css/style.css`.
-- [ ] Confirm product links work.
-- [ ] Test desktop layout.
-- [ ] Test tablet layout.
-- [ ] Test mobile layout.
-- [ ] Capture desktop screenshot.
-- [ ] Capture tablet screenshot.
-- [ ] Capture mobile screenshot.
-- [ ] Place screenshots in the `screenshots/` folder.
-- [ ] Update the README with the screenshot evidence.
-- [ ] Commit the changes with descriptive commit messages.
-- [ ] Push the changes to the remote GitHub repository.
-- [ ] Copy the GitHub repository URL into the LMS submission.
-
-## 12. GitHub Repository
-
-**Repository URL:** Add the existing BrandScope GitHub repository URL here before submission.
+## 15. Submission readiness
+- [x] Part 2 website retained and extended.
+- [x] Interactive product search.
+- [x] Enquiry bag and WhatsApp enquiry link.
+- [x] Interactive map embed.
+- [x] Image lightbox.
+- [x] SEO metadata on homepage and product pages.
+- [x] Descriptive image filenames and alt text.
+- [x] Enquiry form validation and email hand-off.
+- [x] README and changelog updated.
+- [ ] Browser testing and screenshots captured by the student.
+- [ ] Git commits pushed to the existing GitHub repository.
+- [ ] GitHub Pages enabled and published URL verified.

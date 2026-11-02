@@ -1,0 +1,26 @@
+BrandScope Part 3 — Final Steps Before Submission
+
+Completed in this project folder:
+- Part 2 homepage and five product detail pages retained.
+- Interactive product search and enquiry bag.
+- Interactive Johannesburg map embed.
+- Product/category image lightbox.
+- Page-specific SEO metadata.
+- Descriptive image filenames and alt text.
+- Contact/enquiry form validation and mailto hand-off.
+- README and CHANGELOG updated.
+
+Still required on the student's computer / GitHub account:
+1. Open the project in VS Code and run it with Live Server or another local server.
+2. Test the search, enquiry bag, lightbox, map and form on desktop, tablet and mobile.
+3. Capture genuine desktop/tablet/mobile screenshots and add them to screenshots/.
+4. Make the descriptive commits listed in README.md and push to origin main.
+5. Enable GitHub Pages in repository Settings > Pages (main branch, root folder).
+6. Open the published URL and test all pages and features.
+7. Add the real published URL to README.md and set the canonical URL in brandscope.html.
+8. Submit the GitHub repository URL and published website URL if the LMS requests both.
+
+Important:
+- The enquiry form prepares an email in the visitor's email application; it does not send automatically because this static project has no server-side email backend.
+- The Google Maps iframe needs an internet connection.
+- The original Part 2 archive did not include lecturer-written feedback, so no feedback statements have been fabricated.

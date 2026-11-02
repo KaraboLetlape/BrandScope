@@ -1,9 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BrandScope</title>
-
+    <meta name="description" content="Shop curated streetwear and branded clothing in South Africa at BrandScope. Explore pre-loved and new pieces, browse products and enquire directly.">
+    <meta name="keywords" content="BrandScope, South African streetwear, streetwear resale, branded clothing, thrift clothing, Stussy, Nike, Aape, Supreme, C.P. Company">
+    <meta name="author" content="BrandScope">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="BrandScope | Curated Streetwear South Africa">
+    <meta property="og:description" content="Authentic style. Curated pieces. Streetwear culture. Discover selected branded clothing at BrandScope.">
+    <meta property="og:type" content="website">
+    <title>BrandScope | Curated Streetwear & Branded Clothing South Africa</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,7 +19,7 @@
     <!-- HEADER -->
     <header class="header">
         <div class="logo">
-            <img src="images/logo.jpg - Copy.JPG" alt="BrandScope Logo">
+            <img src="images/brandscope-logo-header.jpg" alt="BrandScope Logo">
         </div>
 
         <nav class="navbar">
@@ -24,8 +31,8 @@
         </nav>
 
         <div class="header-icons">
-            <button class="icon-btn">🔍</button>
-            <button class="icon-btn">🛒</button>
+            <button class="icon-btn" id="headerSearchButton" type="button" aria-label="Focus product search">🔍</button>
+            <button class="icon-btn" id="enquiryBagButton" type="button" aria-label="Open enquiry bag">🛒 <span id="enquiryBagCount">0</span></button>
         </div>
     </header>
 
@@ -62,9 +69,9 @@
         <a href="#products" class="category-card">
             <div class="category-image">
                 <picture>
-                    <source media="(max-width: 640px)" srcset="images/T-Shirts/White-Blue-Arcteryx-tshirt-mobile.png">
-                    <img src="images/T-Shirts/White-Blue-Arcteryx-tshirt.PNG"
-                         srcset="images/T-Shirts/White-Blue-Arcteryx-tshirt-mobile.png 720w, images/T-Shirts/White-Blue-Arcteryx-tshirt.PNG 1200w"
+                    <source media="(max-width: 640px)" srcset="images/T-Shirts/white-blue-arcteryx-tshirt-mobile.png">
+                    <img src="images/T-Shirts/white-blue-arcteryx-tshirt.png"
+                         srcset="images/T-Shirts/white-blue-arcteryx-tshirt-mobile.png 720w, images/T-Shirts/white-blue-arcteryx-tshirt.png 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="T-Shirts">
                 </picture>
             </div>
@@ -74,9 +81,9 @@
         <a href="#products" class="category-card">
             <div class="category-image">
                 <picture>
-                    <source media="(max-width: 640px)" srcset="images/Hoodies/Grey Camo Aape Hoodie-mobile.png">
-                    <img src="images/Hoodies/Grey Camo Aape Hoodie.PNG"
-                         srcset="images/Hoodies/Grey Camo Aape Hoodie-mobile.png 720w, images/Hoodies/Grey Camo Aape Hoodie.PNG 1200w"
+                    <source media="(max-width: 640px)" srcset="images/Hoodies/grey-camo-aape-hoodie-mobile.png">
+                    <img src="images/Hoodies/grey-camo-aape-hoodie.png"
+                         srcset="images/Hoodies/grey-camo-aape-hoodie-mobile.png 720w, images/Hoodies/grey-camo-aape-hoodie.png 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Hoodies">
                 </picture>
             </div>
@@ -87,8 +94,8 @@
             <div class="category-image">
                 <picture>
                     <source media="(max-width: 640px)" srcset="images/Sweaters/GREEN S SWIRL STUSSY SWEATER-mobile.JPEG">
-                    <img src="images/Sweaters/GREEN S SWIRL STUSSY SWEATER.JPEG"
-                         srcset="images/Sweaters/GREEN S SWIRL STUSSY SWEATER-mobile.JPEG 720w, images/Sweaters/GREEN S SWIRL STUSSY SWEATER.JPEG 1200w"
+                    <img src="images/Sweaters/green-s-swirl-stussy-sweater.jpeg"
+                         srcset="images/Sweaters/GREEN S SWIRL STUSSY SWEATER-mobile.JPEG 720w, images/Sweaters/green-s-swirl-stussy-sweater.jpeg 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Sweaters">
                 </picture>
             </div>
@@ -99,8 +106,8 @@
             <div class="category-image">
                 <picture>
                     <source media="(max-width: 640px)" srcset="images/Jackets/TNF X Supreme jacket-mobile.JPEG">
-                    <img src="images/Jackets/TNF X Supreme jacket.JPEG"
-                         srcset="images/Jackets/TNF X Supreme jacket-mobile.JPEG 720w, images/Jackets/TNF X Supreme jacket.JPEG 1200w"
+                    <img src="images/Jackets/tnf-x-supreme-jacket.jpeg"
+                         srcset="images/Jackets/TNF X Supreme jacket-mobile.JPEG 720w, images/Jackets/tnf-x-supreme-jacket.jpeg 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Jackets">
                 </picture>
             </div>
@@ -111,8 +118,8 @@
             <div class="category-image">
                 <picture>
                     <source media="(max-width: 640px)" srcset="images/Pants/columbia omni pants-mobile.PNG">
-                    <img src="images/Pants/columbia omni pants.PNG"
-                         srcset="images/Pants/columbia omni pants-mobile.PNG 720w, images/Pants/columbia omni pants.PNG 1200w"
+                    <img src="images/Pants/columbia-omni-pants.png"
+                         srcset="images/Pants/columbia omni pants-mobile.PNG 720w, images/Pants/columbia-omni-pants.png 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Pants">
                 </picture>
             </div>
@@ -123,8 +130,8 @@
             <div class="category-image">
                 <picture>
                     <source media="(max-width: 640px)" srcset="images/Caps/nike cap-mobile.PNG">
-                    <img src="images/Caps/nike cap.PNG"
-                         srcset="images/Caps/nike cap-mobile.PNG 720w, images/Caps/nike cap.PNG 1200w"
+                    <img src="images/Caps/nike-cap.png"
+                         srcset="images/Caps/nike cap-mobile.PNG 720w, images/Caps/nike-cap.png 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Caps">
                 </picture>
             </div>
@@ -135,8 +142,8 @@
             <div class="category-image">
                 <picture>
                     <source media="(max-width: 640px)" srcset="images/Beanies/C.P Company black beanie-mobile.JPEG">
-                    <img src="images/Beanies/C.P Company black beanie.JPEG"
-                         srcset="images/Beanies/C.P Company black beanie-mobile.JPEG 720w, images/Beanies/C.P Company black beanie.JPEG 1200w"
+                    <img src="images/Beanies/c-p-company-black-beanie.jpeg"
+                         srcset="images/Beanies/C.P Company black beanie-mobile.JPEG 720w, images/Beanies/c-p-company-black-beanie.jpeg 1200w"
                          sizes="(max-width: 640px) 100vw, 25vw" alt="Beanies">
                 </picture>
             </div>
@@ -153,11 +160,20 @@
         <h2>FEATURED PRODUCTS</h2>
     </div>
 
-    <div class="product-grid">
+    <div class="product-search" role="search">
+        <label for="productSearch">Search the collection</label>
+        <div class="search-control">
+            <input type="search" id="productSearch" placeholder="Search by product or brand..." autocomplete="off">
+            <button type="button" id="clearSearch" aria-label="Clear product search">CLEAR</button>
+        </div>
+        <p id="searchStatus" class="search-status" aria-live="polite">Showing all featured products.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid">
 
         <!-- PRODUCT 1 -->
         <div class="product-card">
-            <div class="product-image stussy-product"></div>
+            <div class="product-image"><img src="images/Sweaters/green-s-swirl-stussy-sweater.jpeg" alt="Green S Swirl Stussy sweater in green" loading="lazy"></div>
 
             <div class="product-info">
                 <p class="product-brand">STUSSY</p>
@@ -169,13 +185,14 @@
     VIEW PRODUCT
 
 </a>
+                <button type="button" class="add-enquiry-button" data-product="Green S Swirl Stussy Sweater" data-price="R2,200">ADD TO ENQUIRY</button>
 
             </div>
         </div>
 
         <!-- PRODUCT 2 -->
         <div class="product-card">
-            <div class="product-image supreme-product"></div>
+            <div class="product-image"><img src="images/Jackets/tnf-x-supreme-jacket.jpeg" alt="The North Face x Supreme USA jacket" loading="lazy"></div>
 
             <div class="product-info">
                 <p class="product-brand">THE NORTH FACE X SUPREME</p>
@@ -186,12 +203,13 @@
                 <a href="product-tnf supreme.html" class="buy-button">
     VIEW PRODUCT
 </a>
+                <button type="button" class="add-enquiry-button" data-product="The North Face X Supreme USA Jacket" data-price="R1,600">ADD TO ENQUIRY</button>
             </div>
         </div>
 
         <!-- PRODUCT 3 -->
         <div class="product-card">
-            <div class="product-image cp-product"></div>
+            <div class="product-image"><img src="images/Beanies/c-p-company-black-beanie.jpeg" alt="Black C.P. Company goggle beanie" loading="lazy"></div>
 
             <div class="product-info">
                 <p class="product-brand">C.P. COMPANY</p>
@@ -202,12 +220,13 @@
                 <a href="product-C.P company.html" class="buy-button">
     VIEW PRODUCT
 </a>
+                <button type="button" class="add-enquiry-button" data-product="C.P. Company Goggle Beanie" data-price="R700">ADD TO ENQUIRY</button>
             </div>
         </div>
 
         <!-- PRODUCT 4 -->
         <div class="product-card">
-            <div class="product-image nike-product"></div>
+            <div class="product-image"><img src="images/Caps/nike-cap.png" alt="Nike black cap" loading="lazy"></div>
 
             <div class="product-info">
                 <p class="product-brand">NIKE</p>
@@ -218,11 +237,12 @@
                 <a href="product-Nike.html" class="buy-button">
     VIEW PRODUCT
 </a>
+                <button type="button" class="add-enquiry-button" data-product="Nike Cap" data-price="R470">ADD TO ENQUIRY</button>
           </div>
         </div>
 
 <div class="product-card">
-    <div class="product-image aape-product"></div>
+    <div class="product-image"><img src="images/Hoodies/grey-camo-aape-hoodie.png" alt="Aape grey camouflage hoodie" loading="lazy"></div>
 
     <div class="product-info">
         <p class="product-brand">AAPE UNIVERSE</p>
@@ -233,6 +253,7 @@
         <a href="product-Aape.html" class="buy-button">
     VIEW PRODUCT
 </a>
+                <button type="button" class="add-enquiry-button" data-product="Aape Grey Camo Hoodie" data-price="R800">ADD TO ENQUIRY</button>
     </div>
 </div>
             </div>
@@ -354,6 +375,15 @@
             <div class="contact-item">
                 <strong>LOCATION</strong>
                 <p>Johannesburg, South Africa</p>
+                <div class="map-wrapper">
+                    <iframe
+                        title="Interactive map showing Johannesburg, South Africa"
+                        src="https://www.google.com/maps?q=Johannesburg%2C%20South%20Africa&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
 
             <div class="contact-item">
@@ -372,49 +402,78 @@
 
             <h3>SEND US A MESSAGE</h3>
 
-            <form id="contactForm">
+            <form id="contactForm" action="mailto:brandscope.za@gmail.com" method="post" enctype="text/plain" novalidate>
+                <div class="form-field">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" minlength="2" maxlength="80" autocomplete="name" required>
+                    <small class="field-error" id="nameError"></small>
+                </div>
 
-                <label for="name">Name</label>
+                <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" maxlength="120" autocomplete="email" required>
+                    <small class="field-error" id="emailError"></small>
+                </div>
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required>
+                <div class="form-field">
+                    <label for="phone">Phone number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+27 ..." autocomplete="tel" pattern="[+0-9() -]{7,20}">
+                    <small class="field-error" id="phoneError"></small>
+                </div>
 
+                <div class="form-field">
+                    <label for="subject">Enquiry type</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose an enquiry</option>
+                        <option value="Product availability">Product availability</option>
+                        <option value="Sizing and condition">Sizing and condition</option>
+                        <option value="Delivery and shipping">Delivery and shipping</option>
+                        <option value="Order support">Order support</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <small class="field-error" id="subjectError"></small>
+                </div>
 
-                <label for="email">Email</label>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" minlength="10" maxlength="1000" placeholder="Tell us how we can help (at least 10 characters)..." required></textarea>
+                    <small class="field-error" id="messageError"></small>
+                </div>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your email"
-                    required>
-
-
-                <label for="message">Message</label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    placeholder="How can we help?"
-                    required></textarea>
-
-
-                <button type="submit">
-                    SEND MESSAGE
-                </button>
-
-            <form id="contactForm"></form>
+                <button type="submit" id="sendMessageButton">SEND ENQUIRY</button>
+                <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+                <p class="form-note">Submitting opens your email application with your enquiry prepared. Your message is not stored on this website.</p>
+            </form>
 
         </div>
 
     </div>
 
 </section>
+
+
+
+<!-- Enquiry bag: collect products before contacting BrandScope -->
+<aside class="enquiry-bag" id="enquiryBag" aria-hidden="true" aria-label="Enquiry bag">
+    <div class="enquiry-bag-header">
+        <h2>Your enquiry bag</h2>
+        <button type="button" id="closeEnquiryBag" aria-label="Close enquiry bag">&times;</button>
+    </div>
+    <ul id="enquiryBagItems"><li>Your selected products will appear here.</li></ul>
+    <p id="enquiryBagTotal">0 items selected</p>
+    <a href="#" id="sendBagWhatsApp" class="buy-button" target="_blank" rel="noopener">ENQUIRE ON WHATSAPP</a>
+</aside>
+
+<!-- Accessible product image gallery lightbox -->
+<div class="lightbox" id="imageLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Product image viewer">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <figure>
+        <img id="lightboxImage" src="" alt="Expanded BrandScope product photograph">
+        <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+</div>
 
 </main>
 
@@ -425,7 +484,7 @@
         <div class="footer-brand">
 
             <img
-                src="images/logo.jpg.JPG"
+                src="images/brandscope-logo-footer.jpg"
                 alt="BrandScope Logo">
 
             <p>
@@ -486,7 +545,7 @@
 </footer>
 
 
-    <script src="javascript/script.js"></script>
+    <script src="javascript/script.js" defer></script>
 
 </body>
 </html>
